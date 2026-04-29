@@ -30,6 +30,6 @@ int new_main() {
   uprints(up, "sum = ");
   uputc(up, (sum / 10) + '0');
   uputc(up, (sum % 10) + '0');
-  uprints(up, "\n\rEND OF RUN\n\r");
+  uprints(up, "\n\rEND OAF RUN\n\r");
   uprintf("UART[0] Baudrate: %x",  *(uart[0].base + UARTIBRD) );
 }
