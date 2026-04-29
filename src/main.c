@@ -6,7 +6,7 @@ int sum;
 
 #include "uart.h"  // UART driver code file
 
-int main() {
+int new_main() {
   int i;
   sum = 10;
   char string[64];
@@ -31,4 +31,5 @@ int main() {
   uputc(up, (sum / 10) + '0');
   uputc(up, (sum % 10) + '0');
   uprints(up, "\n\rEND OF RUN\n\r");
+  uprintf("UART[0] Baudrate: %x",  *(uart[0].base + UARTIBRD) );
 }
