@@ -22,8 +22,10 @@ int uart_init() {
     up->n = i;
   }
   uart[3].base = (char*)(0x10009000);  // uart3 at 0x10009000
-  *(uart[3].base + UARTIBRD) = uart_rate_divisors[4 - 4];//problem?
+  *(uart[3].base + UARTIBRD) = uart_rate_divisors[4 - 3];//problem?
   *(uart[3].base + UARTLCR) = 0x60;
+
+  *(uart[4].base + UARTIBRD) = uart_rate_divisors[4 - 4];//problem?
 }
 
 // input a char from UART pointed by up
